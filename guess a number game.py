@@ -28,7 +28,6 @@ def game_level():
 
 def game_on()  :
     answer = randint(1, 100)
-    print(f"the answer is {answer}")
     print("You need to guess a number between 1 and 100")
     turns = game_level()
 
@@ -39,6 +38,7 @@ def game_on()  :
         turns = check_answer(user_guess, answer, turns)
         if turns == 0 :
             print("You have no more guesses left. You lost.")
+            print(f"the answer is {answer}")
             return
         elif user_guess != answer:
             print("Guess again...")
